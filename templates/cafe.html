@@ -3,8 +3,8 @@
 <h2>{{ cafe }}</h2>
 <ul>
   {% for item in menu %}
-    <li>{{ item }} - 
-      <a href="{{ url_for('add_to_cart', cafe=cafe, item=item) }}">Add to cart</a>
+    <li>{{ item.name }} — ₹{{ item.price }}
+      <a href="{{ url_for('add_to_cart', cafe=cafe, item=item.name) }}">Add to cart</a>
     </li>
   {% endfor %}
 </ul>
